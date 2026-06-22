@@ -1,0 +1,25 @@
+.container {
+  max-width: 200px;
+  margin: auto;
+}
+
+.svg-circle:hover + .svg-text-group {
+  opacity: 0;
+}
+
+/* The divs with the class "child" will get selected by this */
+.group1 {
+  /* Our cool CSS */
+  background-color: red;
+}
+
+.child:nth-child(2) {
+  /* Selects the 5th element with class myList */
+  background-color: blue;
+}
+
+
+/* The divs with the class "grand-child" will get selected by this */
+/*main > div > div {
+  /* More cool CSS
+}*/
