@@ -8,36 +8,56 @@
     <link rel="stylesheet" href="styleForm.css">
 </head>
 <body>
-    <header>header</header>
-    <aside>aside de la imagen</aside>
+    <header>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus unde totam fuga tempore mollitia nulla architecto doloremque porro nihil! Necessitatibus nihil repellat voluptate quo quia earum incidunt consequuntur officiis natus.</header>
+    <aside>
+        <img src="examplestyle/mos-design-7Bm7Lhets9Q-unsplash.jpg" alt="Fondo de Gundam Mecha">
+        <div class="contenedorLogo">
+            <img src="examplestyle/png-transparent-emblem-anime-manga-logo-anime-emblem-manga-logo.png" alt="Logo Compañia" class="logoCompania">
+            <h2 class="textoCompania">COMPAÑIA</h2>
+        </div>
+    </aside>
     <section>
-        <div>
+        <div class="primerDivSection">
             <fieldset>
                 <legend>Let&#39;s do this</legend>
 
-                <form action="#" method="get"></form>
+                <form id="miFormulario" action="#" method="get">
 
-                <label for="firstName">FIRST NAME</label>
-                <input type="text" name="firstName" id="firstName" placeholder="Thor">
+                    <div class="campo">
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Thor">
+                    </div>
 
-                <label for="lastName">LAST NAME</label>
-                <input type="text" name="lastName" id="lastName" placeholder="Doe">
+                    <div class="campo">
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Doe">
+                    </div>
 
-                <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" placeholder="JonDoe@example.com">
+                    <div class="campo">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" placeholder="JonDoe@example.com">
+                    </div>
 
-                <label for="phoneNumber">PHONE NUMBER</label>
-                <input type="number" name="phoneNumber" id="phoneNumber">
+                    <div class="campo">   
+                        <label for="phoneNumber">PHONE NUMBER</label>
+                        <input type="number" name="phoneNumber" id="phoneNumber">
+                    </div>
 
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password">
+                    <div class="campo">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password">
+                    </div>
 
-                <label for="confirmPassword">CONFIRM PASSWORD</label>
-                <input type="password" name="confirmPassword" id="confirmPassword">
+                    <div class="campo">   
+                        <label for="confirmPassword">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword">
+                    </div>
+
+                </form>
             </fieldset>
-            <button type="submit">Create Account</button>
         </div>
         <div>
+            <button type="submit" form="miFormulario">Create Account</button>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </section>
