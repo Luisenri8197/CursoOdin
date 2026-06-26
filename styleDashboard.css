@@ -1,0 +1,174 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Config agregada manualmente */
+
+ul, ol {
+  margin: 0;        /* elimina márgenes por defecto */
+  padding: 0;       /* elimina padding por defecto */
+  list-style: none; /* quita viñetas y números */
+}
+
+
+/* Organización contenido principal - Grid 16 columnas */ 
+
+body{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 12px;
+}
+
+/* Header */
+
+header {
+  grid-area: 1/5/5/17;
+  border: 1px solid;
+}
+
+/* hijos header */
+
+header > div{
+  display: flex;
+  gap: 8px;
+}
+
+header nav{
+  display: flex;
+}
+
+/* barra busqueda y otros */
+.top-browser{
+  padding: 4px 8px;
+}
+
+.search-bar{
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  gap: 8px;
+}
+
+.search-bar > svg{
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0; /* Evita que se deforme*/
+}
+
+.search-bar > input{
+  border: none;
+  outline: none; /* Quita el borde al hace el focus*/
+  flex: 1; /*ocupa todo el espacio restante como el fr en grid*/
+  font-size: 14px;
+}
+
+.top-browser > svg{
+  width: 20px;
+  height: 36px;
+  flex-shrink: 0; /* Evita que se deforme*/
+}
+
+.top-browser img{
+  margin-top: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.name-browser{
+  margin-top: 8px;
+}
+
+/* aside */
+
+body > aside{
+  grid-area: 1/1/15/5;
+  border: 1px solid;
+}
+
+/* barra nav welcome */
+
+.welcome-nav{
+  display: inline-flex;
+}
+
+.logo-nav{
+  display: inline-flex;
+}
+
+.logo-nav > img{
+  width: 20px;
+  height: 20px;
+}
+
+/* main */
+
+main{
+  grid-area: 5/5/15/17;
+  border: 1px solid;
+}
+
+/* footer */
+
+footer{
+  grid-area: 15/1/17/17;
+  border: 1px solid;
+}
