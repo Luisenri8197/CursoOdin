@@ -64,8 +64,12 @@ ul, ol {
   margin: 0;        /* elimina márgenes por defecto */
   padding: 0;       /* elimina padding por defecto */
   list-style: none; /* quita viñetas y números */
+  /*border: 1px solid; /* OJO SOLO PARA VISUALIZAR CAJAS*/
 }
 
+/* li{
+  border: 1px solid; /* OJOOO SOLO PARA UBICACION
+}*/
 
 /* Organización contenido principal - Grid 16 columnas */ 
 
@@ -78,7 +82,7 @@ body{
 /* Header */
 
 header {
-  grid-area: 1/5/5/17;
+  grid-area: 1/5/3/17;
   border: 1px solid;
 }
 
@@ -89,9 +93,9 @@ header > div{
   gap: 8px;
 }
 
-header nav{
-  display: flex;
-}
+/* header nav{
+  display: inline-flex;
+} */
 
 /* barra busqueda y otros */
 .top-browser{
@@ -131,6 +135,7 @@ header nav{
   margin-top: 8px;
   width: 20px;
   height: 20px;
+  border-radius: 50%;
 }
 
 .name-browser{
@@ -144,25 +149,83 @@ body > aside{
   border: 1px solid;
 }
 
-/* barra nav welcome */
-
-.welcome-nav{
+/* Titulo aside */
+.title-aside{
   display: inline-flex;
 }
 
-.logo-nav{
-  display: inline-flex;
-}
-
-.logo-nav > img{
+.title-aside img{
+  margin-top: 8px;
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+}
+
+/*primer listado aside - home...*/
+
+.mid-aside{
+  padding: 4px;
+}
+
+/*Segundo listado aside*/
+
+.bottom-aside{
+  padding: 4px;
+}
+
+/* barra nav welcome */
+
+.welcome-nav ul{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.welcome-nav ul li:nth-child(1){
+  flex: 1;
+}
+
+.tarjeta-wellcome{
+  margin-right: 20px;
+  padding: 2px;
+}
+
+/* Configuración primer li - img y texto */
+.logo-nav{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+  gap: 5px;
+}
+
+.big-name{
+  grid-area: 2/2/3/3;
+  border: 1px solid;
+  justify-self: left;
+}
+
+.little-nav-hi{
+  grid-area: 1/2/2/3;
+  justify-self: left;
+  border: 1px solid;
+}
+
+
+.logo-nav > img{
+  grid-area: 1/1/3/2;
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+  justify-self: left;
+  border: 1px solid;
 }
 
 /* main */
 
 main{
-  grid-area: 5/5/15/17;
+  grid-area: 3/5/15/17;
   border: 1px solid;
 }
 
